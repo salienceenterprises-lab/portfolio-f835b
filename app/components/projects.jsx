@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, ExternalLink, Folder } from "lucide-react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 function ProjectCard({ project, index }) {
   // Guard against undefined project data
@@ -40,7 +41,7 @@ function ProjectCard({ project, index }) {
                 className="text-white/30 hover:text-violet-400 transition-colors"
                 aria-label="GitHub"
               >
-                <Github className="w-[18px] h-[18px]" />
+                <FaGithub className="w-[18px] h-[18px]" />
               </a>
             )}
 
