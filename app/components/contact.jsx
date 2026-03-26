@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, Mail, Github, Linkedin, CheckCircle, Loader2 } from "lucide-react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function PortfolioContact({ data }) {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -57,8 +58,8 @@ export default function PortfolioContact({ data }) {
   // Filter links safely using optional chaining
   const contactLinks = [
     { show: data?.email, icon: Mail, label: "Email", value: data?.email, href: `mailto:${data?.email}`, color: "text-violet-400", bg: "bg-violet-500/10" },
-    { show: data?.github, icon: Github, label: "GitHub", value: "View Profile", href: data?.github, color: "text-white/60", bg: "bg-white/10" },
-    { show: data?.linkedin, icon: Linkedin, label: "LinkedIn", value: "Connect", href: data?.linkedin, color: "text-blue-400", bg: "bg-blue-500/10" }
+    { show: data?.github, icon: FaGithub, label: "GitHub", value: "View Profile", href: data?.github, color: "text-white/60", bg: "bg-white/10" },
+    { show: data?.linkedin, icon: FaLinkedin, label: "LinkedIn", value: "Connect", href: data?.linkedin, color: "text-blue-400", bg: "bg-blue-500/10" }
   ].filter(item => item.show);
 
   // If there are no links and no form, we don't render the section
