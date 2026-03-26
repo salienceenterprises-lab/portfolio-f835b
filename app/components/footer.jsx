@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function PortfolioFooter({ data }) {
   const year = new Date().getFullYear();
@@ -26,7 +27,7 @@ export default function PortfolioFooter({ data }) {
               className="text-white/30 hover:text-white/70 transition-colors"
               aria-label="GitHub"
             >
-              <Github className="w-4 h-4" />
+              <FaGithub className="w-4 h-4" />
             </a>
           )}
 
@@ -39,7 +40,7 @@ export default function PortfolioFooter({ data }) {
               className="text-white/30 hover:text-white/70 transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="w-4 h-4" />
+              <FaLinkedin className="w-4 h-4" />
             </a>
           )}
 
